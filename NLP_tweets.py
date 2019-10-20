@@ -1,13 +1,13 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import nltk 
+import nltk  #for nlp purpose
+import re
+from sklearn.naive_bayes import GaussianNB
 
 from nltk.corpus import stopwords  #Removing stop words like emojies for he she etc..
 from nltk.stem.porter import PorterStemmer
 ps = PorterStemmer()
-import re
-
 dataset = pd.read_csv('train.csv')
 
 processed_tweets = []
